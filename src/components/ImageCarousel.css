@@ -1,0 +1,54 @@
+.ggc-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;               /* space for arrows */
+  margin-top: 60px;
+}
+
+.ggc-card {
+  background: linear-gradient(135deg, #1a1c2e, #0d0f1d);
+  border-radius: 20px;     /* smooth rectangle */
+  padding: 30px 50px;      /* more padding */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  width: 900px;            /* make it wide */
+  height: 400px;           /* make it taller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ggc-slide-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.ggc-image {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+/* Arrow Buttons */
+.ggc-btn {
+  background: transparent;
+  border: 2px solid #a58bff;
+  color: #a58bff;
+  border-radius: 50%;
+  width: 55px;             /* larger arrows */
+  height: 55px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ggc-btn:hover {
+  background: #a58bff;
+  color: #fff;
+}

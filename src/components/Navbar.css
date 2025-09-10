@@ -1,0 +1,19 @@
+/* src/components/Navbar.css */
+* { box-sizing: border-box; }
+.navbar{
+  height:56px;
+  width:100%;
+  background:#000;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 28px;
+  font-weight:700;
+  letter-spacing:0.6px;
+  position:sticky;
+  top:0;
+  z-index:30;
+}
+.nav-left{ font-size:16px; }
+.nav-right{ font-size:14px; opacity:0.95; }
