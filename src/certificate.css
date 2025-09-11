@@ -1,0 +1,285 @@
+/* 🌌 Body */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+/* 🔝 Header */
+.top-header {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo, .csi {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 📄 Main layout */
+.certificate-section {
+  display: grid;
+  grid-template-columns: minmax(320px, 35%) 1fr;
+  gap: 2rem;
+  padding: 120px 40px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 📋 Form panel */
+.form-container {
+  background: linear-gradient(to right, #1c2a3b, #1a2f45);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: 750px;
+}
+
+.form-container h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: white;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 500;
+  color:#B06FFB;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+/* 📂 Upload row */
+.name-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.name-upload-container input[type="text"],
+.upload-btn {
+  height: 44px;
+  line-height: 44px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.name-upload-container input[type="text"] {
+  flex: 1;
+  padding: 0 12px;
+}
+
+.upload-btn {
+  background: linear-gradient(90deg,#a855f7,#60a5fa);
+  color:black;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.upload-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* 📥 Download Button */
+.form-container .download-btn {
+  margin-top: 15px;
+  width: 100%;
+  background:linear-gradient(90deg,#a855f7,#60a5fa);
+  color: black;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form-container .download-btn:hover {
+  background-color:#B06FFB;
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* 🖼 Certificate preview */
+.preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px; /* no more left:250px */
+  margin: 0 auto;
+}
+
+.certificate-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cert-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* ✍ Certificate text */
+.cert-name {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-style: italic;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.cert-subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.cert-signature {
+  position: absolute;
+  bottom: 18%;
+  left: 30%;
+  transform: translate(-50%, 0);
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+}
+
+.cert-date {
+  position: absolute;
+  bottom: 18%;
+  right: 30%;
+  transform: translate(50%, 0);
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  font-style: italic;
+}
+
+/* 🎨 Template Colors */
+.template1 .cert-name,
+.template1 .cert-subtitle,
+.template1 .cert-signature,
+.template1 .cert-date { color: white; }
+
+.template2 .cert-name,
+.template2 .cert-subtitle,
+.template2 .cert-signature,
+.template2 .cert-date { color: #B06FFB; }
+
+.template3 .cert-name,
+.template3 .cert-subtitle,
+.template3 .cert-signature,
+.template3 .cert-date { color: #FFD700; }
+
+
+/* ---------------- Template-specific positioning ---------------- */
+.template1 .cert-name { top: 44%; left: 50%; }
+.template1 .cert-subtitle { top: 52.5%; left: 67%; }
+.template1 .cert-signature { bottom: 19%; left: 27%; }
+.template1 .cert-date { bottom: 19%; right: 25%; }
+
+.template2 .cert-name { top: 52%; left: 50%; }
+.template2 .cert-subtitle { top: 60.5%; left: 65%; }
+.template2 .cert-signature { bottom: 23.5%; left: 36.5%; }
+.template2 .cert-date { bottom: 23.5%; right: 37%; }
+
+.template3 .cert-name { top: 54%; left: 50%; }
+.template3 .cert-subtitle { top: 63%; left: 62%; }
+.template3 .cert-signature { bottom: 21.5%; left: 27.5%; }
+.template3 .cert-date { bottom: 21.5%; right: 28%; }
+
+/* 🖼 Template selector */
+.template-selector {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 0 20px;
+}
+
+.template-thumb {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.template-thumb:hover { transform: scale(1.05); }
+.template-thumb.active { border: 4px solid #B06FFB; }
+
+/* 📱 Mobile */
+@media (max-width: 900px) {
+  .certificate-section {
+    grid-template-columns: 1fr;
+    padding: 100px 20px 40px;
+  }
+  .form-container { max-width: 100%; }
+  .certificate-wrapper { max-width: 100%; }
+  .cert-name { font-size: clamp(1.5rem, 6vw, 2.5rem); }
+  .name-upload-container { flex-direction: column; align-items: stretch; }
+}
